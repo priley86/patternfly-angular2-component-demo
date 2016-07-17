@@ -10,11 +10,29 @@
   {{/unless}}
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <script src="vendor/webcomponentsjs/full.js"></script>
+
+  <!-- patternfly css -->
+  <link rel="stylesheet" href="vendor/patternfly/dist/css/patternfly.min.css"/>
+  <link rel="stylesheet" href="vendor/patternfly/dist/css/patternfly-additions.min.css"/>
+
+  <!-- pf web components -->
+  <script src="vendor/bootstrap-web-components/dist/bootstrap-web-components.js"></script>
+  <link rel="import" href="vendor/bootstrap-web-components/components/pf-progress.html">
+
+  <!-- additional component styles -->
+  <template id="x-css">
+    bs-progress {
+      display: block;
+    }
+  </template>
+
 </head>
 <body>
   <app-root>Loading...</app-root>
 
-  
+
 
     {{#each scripts.polyfills}}
     <script src="{{.}}"></script>
@@ -25,7 +43,7 @@
       }).catch(console.error.bind(console));
     </script>
 
-  
+
 
 </body>
 </html>
