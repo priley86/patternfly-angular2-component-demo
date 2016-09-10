@@ -1,6 +1,6 @@
 import { PatternflyNg2SpikePage } from './app.po';
 
-describe('patternfly-ng2-spike App', function() {
+describe('patternfly-angular2-component-demo App', function() {
   let page: PatternflyNg2SpikePage;
 
   beforeEach(() => {

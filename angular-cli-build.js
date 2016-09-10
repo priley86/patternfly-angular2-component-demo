@@ -17,8 +17,10 @@ module.exports = function(defaults) {
       'rxjs/**/*.+(js|js.map)',
       '@angular/**/*.+(js|js.map)',
       'patternfly/dist/**/*',
+      'patternfly/node_modules/**/*',
       'webcomponentsjs/**/*.js',
-      'bootstrap-web-components/**/*'
+      'pf-tabs-demo/**/*',
+      'd3/**/*'
     ]
   });
 };

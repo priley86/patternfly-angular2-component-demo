@@ -1,4 +1,14 @@
-# PatternflyNg2Spike
+# patternfly-angular2-component-demo
+
+This app serves as a demo for building your app with [PatternFly](http://patternfly.org/), [Angular2](https://angular.io/), and [WebComponents](http://webcomponents.org/).
+
+![Image of PatternFly](https://raw.githubusercontent.com/priley86/patternfly-angular2-component-demo/master/icons/patternfly-orb.png)
+![Image of Angular2](https://raw.githubusercontent.com/priley86/patternfly-angular2-component-demo/master/icons/ng2.png)
+![Image of WebComponents](https://raw.githubusercontent.com/priley86/patternfly-angular2-component-demo/master/icons/webcomponents.png)
+
+This app also attempts to showcase our abilities with custom element interop and new [webcomponent](http://webcomponents.org/) standards.
+
+You can find our `pf-tabs` component [here](https://github.com/priley86/pf-tabs-demo).
 
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.9.
 

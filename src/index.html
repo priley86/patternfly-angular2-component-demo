@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>PatternflyNg2Spike</title>
+  <title>patternfly-angular2-component-demo</title>
   <base href="/">
 
   {{#unless environment.production}}
@@ -11,28 +11,40 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 
-  <script src="vendor/webcomponentsjs/full.js"></script>
-
   <!-- patternfly css -->
   <link rel="stylesheet" href="vendor/patternfly/dist/css/patternfly.min.css"/>
   <link rel="stylesheet" href="vendor/patternfly/dist/css/patternfly-additions.min.css"/>
+  <style>body {background-color: #f5f5f5;}</style>
 
-  <!-- additional component styles -->
-  <template id="x-css">
-    bs-progress {
-    display: block;
-    }
-  </template>
+  <!-- conditionally load the webcomponent polyfill-->
+  <script>
+    (function() {
+      if ('registerElement' in document
+              && 'import' in document.createElement('link')
+              && 'content' in document.createElement('template')) {
+        // platform is good!
+      } else {
+        // polyfill the platform!
+        var e = document.createElement('script');
+        e.src = 'vendor/webcomponentsjs/lite.js';
+        document.body.appendChild(e);
+      }
+    })();
+  </script>
 
   <!-- pf web components -->
-  <script src="vendor/bootstrap-web-components/dist/bootstrap-web-components.js"></script>
-  <link rel="import" href="vendor/bootstrap-web-components/components/pf-progress.html">
+  <link rel="import" href="vendor/pf-tabs-demo/dist/pf-tabs.html">
+
+  <!-- vendor scripts -->
+  <script src="vendor/patternfly/node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="vendor/patternfly/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="vendor/patternfly/dist/js/patternfly.min.js"></script>
+  <script src="vendor/d3/d3.min.js"></script>
+  <script src="vendor/patternfly/node_modules/c3/c3.min.js"></script>
+  <script src="vendor/patternfly/node_modules/jquery-match-height/dist/jquery.matchHeight-min.js"></script>
 </head>
 <body>
   <app-root>Loading...</app-root>
-
-
-
     {{#each scripts.polyfills}}
     <script src="{{.}}"></script>
     {{/each}}
@@ -41,8 +53,5 @@
         System.import('main');
       }).catch(console.error.bind(console));
     </script>
-
-
-
 </body>
 </html>

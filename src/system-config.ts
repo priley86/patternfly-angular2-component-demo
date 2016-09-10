@@ -34,10 +34,12 @@ const barrels: string[] = [
   // App specific barrels.
   'app',
   'app/shared',
-  'app/badge',
-  'app/progress',
-  'app/custom',
-  'app/web-components',
+  'app/tabs',
+  'app/cards',
+  'app/empty-state',
+  'app/list-view',
+  'app/navbar',
+  'app/toolbar',
   /** @cli-barrel */
 ];
 
@@ -54,6 +56,7 @@ System.config({
   map: {
     '@angular': 'vendor/@angular',
     'rxjs': 'vendor/rxjs',
+    'jquery': 'vendor/patternfly',
     'main': 'main.js'
   },
   packages: cliSystemConfigPackages
